@@ -30,7 +30,7 @@
       <span class="original_link">원문 : <a href="{{ page.original_link }}">{{ page.title }}</a></span>
     {% endif %}
     {% if page.audio_html %}
-      {% include {{ page.audio_html }} %}
+      {{ page.audio_html }}
     {% endif %}
     <main id="content" class="main-content" role="main">
       {{ content }}
