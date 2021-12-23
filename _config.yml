@@ -2,3 +2,4 @@
 theme: jekyll-theme-cayman
 title: seojihyuk blog
 description: 내가 보기 위한 블로그
+permalink: /:categories/:slug
