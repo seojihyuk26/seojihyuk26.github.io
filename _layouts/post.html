@@ -26,7 +26,12 @@
         <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
       {% endif %}
     </header>
-
+    {% if page.original_link %}
+      <span class="original_link">원문 : <a href="{{ page.original_link }}">{{ page.title }}</a></span>
+    {% endif %}
+    {% if page.audio_html %}
+      {{% include {{ page.audio_html }} %}}
+    {% endif %}
     <main id="content" class="main-content" role="main">
       {{ content }}
       <footer class="site-footer">
