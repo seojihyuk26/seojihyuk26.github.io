@@ -32,6 +32,9 @@
   </header>
 
   <main id="content" class="main-content" role="main">
+    {% if page.title == 404 %}
+      {{ content }}
+    {% else %}
     <h2>Search By Tag</h2>
     {% for tag in site.tags %}
     <h3>{{ tag[0] }}</h3>
@@ -54,6 +57,7 @@
         </ul>
       {% endfor %}
     </ul>
+    {% endif %}
 
     <footer class="site-footer">
       {% if site.github.is_project_page %}
