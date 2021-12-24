@@ -2,6 +2,8 @@
 ---
 
 @import "{{ site.theme }}";
-go-to-main.btn {
-    z-index: 1;
-  }
+a#go-to-main.btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
