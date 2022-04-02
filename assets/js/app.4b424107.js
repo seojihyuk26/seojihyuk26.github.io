@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "assets/js/" + ({"page--node-modules-gridsome-app-pages-404-vue":"page--node-modules-gridsome-app-pages-404-vue","page--src-pages-index-vue~page--src-templates-post-vue~page--src-templates-tag-vue~page--src-templat~f42e5fdd":"page--src-pages-index-vue~page--src-templates-post-vue~page--src-templates-tag-vue~page--src-templat~f42e5fdd","page--src-pages-index-vue":"page--src-pages-index-vue","page--src-templates-tag-vue":"page--src-templates-tag-vue","vendors~page--src-templates-post-vue~page--src-templates-translate-page-vue":"vendors~page--src-templates-post-vue~page--src-templates-translate-page-vue","page--src-templates-post-vue":"page--src-templates-post-vue","vendors~page--src-templates-translate-page-vue":"vendors~page--src-templates-translate-page-vue","page--src-templates-translate-page-vue":"page--src-templates-translate-page-vue"}[chunkId]||chunkId) + "." + {"0":"7a103328","1":"6fe58646","page--node-modules-gridsome-app-pages-404-vue":"d0f05707","page--src-pages-index-vue~page--src-templates-post-vue~page--src-templates-tag-vue~page--src-templat~f42e5fdd":"e5757120","page--src-pages-index-vue":"6b94a0b6","page--src-templates-tag-vue":"f08a3593","vendors~page--src-templates-post-vue~page--src-templates-translate-page-vue":"a6a175f3","page--src-templates-post-vue":"90c28a40","vendors~page--src-templates-translate-page-vue":"62e2edde","page--src-templates-translate-page-vue":"0b0f535a"}[chunkId] + ".js"
+/******/ 		return __webpack_require__.p + "assets/js/" + ({"page--node-modules-gridsome-app-pages-404-vue":"page--node-modules-gridsome-app-pages-404-vue","page--src-pages-index-vue~page--src-templates-post-vue~page--src-templates-tag-vue~page--src-templat~f42e5fdd":"page--src-pages-index-vue~page--src-templates-post-vue~page--src-templates-tag-vue~page--src-templat~f42e5fdd","page--src-pages-index-vue":"page--src-pages-index-vue","page--src-templates-tag-vue":"page--src-templates-tag-vue","vendors~page--src-templates-post-vue~page--src-templates-translate-page-vue":"vendors~page--src-templates-post-vue~page--src-templates-translate-page-vue","page--src-templates-post-vue":"page--src-templates-post-vue","vendors~page--src-templates-translate-page-vue":"vendors~page--src-templates-translate-page-vue","page--src-templates-translate-page-vue":"page--src-templates-translate-page-vue"}[chunkId]||chunkId) + "." + {"0":"7b5467e0","1":"7a84fe2c","page--node-modules-gridsome-app-pages-404-vue":"d0f05707","page--src-pages-index-vue~page--src-templates-post-vue~page--src-templates-tag-vue~page--src-templat~f42e5fdd":"e5757120","page--src-pages-index-vue":"6b94a0b6","page--src-templates-tag-vue":"f08a3593","vendors~page--src-templates-post-vue~page--src-templates-translate-page-vue":"a6a175f3","page--src-templates-post-vue":"90c28a40","vendors~page--src-templates-translate-page-vue":"b4787db6","page--src-templates-translate-page-vue":"a92baaf7"}[chunkId] + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -537,7 +537,7 @@ eval("/* WEBPACK VAR INJECTION */(function(global) {var check = function (it) {\
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\nmodule.exports = {\"MinimumDesktopScreenSize\":\"860px\"};\n\n//# sourceURL=webpack:///./src/components/Logo.vue?./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--4-oneOf-1-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--4-oneOf-1-2!./node_modules/sass-loader/dist/cjs.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
+eval("// extracted by mini-css-extract-plugin\nmodule.exports = {\"MinimumDesktopScreenSize\":\"860px\",\"ContentWidth\":\"860px\",\"VocabularySideSpaceWidth\":\"300px\"};\n\n//# sourceURL=webpack:///./src/components/Logo.vue?./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--4-oneOf-1-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--4-oneOf-1-2!./node_modules/sass-loader/dist/cjs.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -1039,7 +1039,7 @@ eval("var global = __webpack_require__(/*! ../internals/global */ \"2oRo\");\n\n
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\nmodule.exports = {\"MinimumDesktopScreenSize\":\"860px\"};\n\n//# sourceURL=webpack:///./src/layouts/Default.vue?./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--4-oneOf-1-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--4-oneOf-1-2!./node_modules/sass-loader/dist/cjs.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
+eval("// extracted by mini-css-extract-plugin\nmodule.exports = {\"MinimumDesktopScreenSize\":\"860px\",\"ContentWidth\":\"860px\",\"VocabularySideSpaceWidth\":\"300px\"};\n\n//# sourceURL=webpack:///./src/layouts/Default.vue?./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--4-oneOf-1-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--4-oneOf-1-2!./node_modules/sass-loader/dist/cjs.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -1723,7 +1723,7 @@ eval("var isObject = __webpack_require__(/*! ../internals/is-object */ \"hh1v\")
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\nmodule.exports = {\"MinimumDesktopScreenSize\":\"860px\"};\n\n//# sourceURL=webpack:///./src/assets/style/index.scss?");
+eval("// extracted by mini-css-extract-plugin\nmodule.exports = {\"MinimumDesktopScreenSize\":\"860px\",\"ContentWidth\":\"860px\",\"VocabularySideSpaceWidth\":\"300px\"};\n\n//# sourceURL=webpack:///./src/assets/style/index.scss?");
 
 /***/ }),
 

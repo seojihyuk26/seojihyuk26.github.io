@@ -71,17 +71,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 
 /***/ }),
 
-/***/ "a0zi":
-/*!******************************************!*\
-  !*** ./src/assets/style/_variables.scss ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// extracted by mini-css-extract-plugin\nmodule.exports = {\"MinimumDesktopScreenSize\":\"860px\"};\n\n//# sourceURL=webpack:///./src/assets/style/_variables.scss?");
-
-/***/ }),
-
 /***/ "v7ku":
 /*!**********************************************!*\
   !*** ./src/components/VSentenceTemplate.vue ***!
