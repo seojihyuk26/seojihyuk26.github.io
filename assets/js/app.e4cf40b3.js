@@ -4,7 +4,7 @@
 /******/ 		var chunkIds = data[0];
 /******/ 		var moreModules = data[1];
 /******/ 		var executeModules = data[2];
-/******/
+/******/ 		var prefetchChunks = data[3] || [];
 /******/ 		// add "moreModules" to the modules object,
 /******/ 		// then flag all "chunkIds" as loaded and fire callback
 /******/ 		var moduleId, chunkId, i = 0, resolves = [];
@@ -21,7 +21,7 @@
 /******/ 			}
 /******/ 		}
 /******/ 		if(parentJsonpFunction) parentJsonpFunction(data);
-/******/
+/******/ 		deferredPrefetch.push.apply(deferredPrefetch, prefetchChunks);
 /******/ 		while(resolves.length) {
 /******/ 			resolves.shift()();
 /******/ 		}
@@ -46,7 +46,24 @@
 /******/ 				result = __webpack_require__(__webpack_require__.s = deferredModule[0]);
 /******/ 			}
 /******/ 		}
+/******/ 		if(deferredModules.length === 0) {
+/******/ 			// chunk prefetching for javascript
+/******/ 			deferredPrefetch.forEach(function(chunkId) {
+/******/ 				if(installedChunks[chunkId] === undefined) {
+/******/ 					installedChunks[chunkId] = null;
+/******/ 					var link = document.createElement('link');
 /******/
+/******/ 					if (__webpack_require__.nc) {
+/******/ 						link.setAttribute("nonce", __webpack_require__.nc);
+/******/ 					}
+/******/ 					link.rel = "prefetch";
+/******/ 					link.as = "script";
+/******/ 					link.href = jsonpScriptSrc(chunkId);
+/******/ 					document.head.appendChild(link);
+/******/ 				}
+/******/ 			});
+/******/ 			deferredPrefetch.length = 0;
+/******/ 		}
 /******/ 		return result;
 /******/ 	}
 /******/
@@ -60,11 +77,11 @@
 /******/ 		"app": 0
 /******/ 	};
 /******/
-/******/ 	var deferredModules = [];
+/******/ 	var deferredModules = [], deferredPrefetch = [];
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "assets/js/" + ({"page--node-modules-gridsome-app-pages-404-vue":"page--node-modules-gridsome-app-pages-404-vue","page--src-pages-index-vue~page--src-templates-post-vue~page--src-templates-tag-vue~page--src-templat~f42e5fdd":"page--src-pages-index-vue~page--src-templates-post-vue~page--src-templates-tag-vue~page--src-templat~f42e5fdd","page--src-pages-index-vue":"page--src-pages-index-vue","page--src-templates-tag-vue":"page--src-templates-tag-vue","vendors~page--src-templates-post-vue~page--src-templates-translate-page-vue":"vendors~page--src-templates-post-vue~page--src-templates-translate-page-vue","page--src-templates-post-vue":"page--src-templates-post-vue","vendors~page--src-templates-translate-page-vue":"vendors~page--src-templates-translate-page-vue","page--src-templates-translate-page-vue":"page--src-templates-translate-page-vue"}[chunkId]||chunkId) + "." + {"0":"7b5467e0","1":"7a84fe2c","page--node-modules-gridsome-app-pages-404-vue":"d0f05707","page--src-pages-index-vue~page--src-templates-post-vue~page--src-templates-tag-vue~page--src-templat~f42e5fdd":"e5757120","page--src-pages-index-vue":"6b94a0b6","page--src-templates-tag-vue":"f08a3593","vendors~page--src-templates-post-vue~page--src-templates-translate-page-vue":"a6a175f3","page--src-templates-post-vue":"90c28a40","vendors~page--src-templates-translate-page-vue":"b4787db6","page--src-templates-translate-page-vue":"a92baaf7"}[chunkId] + ".js"
+/******/ 		return __webpack_require__.p + "assets/js/" + ({"page--node-modules-gridsome-app-pages-404-vue":"page--node-modules-gridsome-app-pages-404-vue","page--src-pages-index-vue~page--src-templates-post-vue~page--src-templates-tag-vue~page--src-templat~f42e5fdd":"page--src-pages-index-vue~page--src-templates-post-vue~page--src-templates-tag-vue~page--src-templat~f42e5fdd","page--src-pages-index-vue":"page--src-pages-index-vue","page--src-templates-tag-vue":"page--src-templates-tag-vue","vendors~page--src-templates-post-vue~page--src-templates-translate-page-vue":"vendors~page--src-templates-post-vue~page--src-templates-translate-page-vue","page--src-templates-post-vue":"page--src-templates-post-vue","vendors~page--src-templates-translate-page-vue":"vendors~page--src-templates-translate-page-vue","page--src-templates-translate-page-vue":"page--src-templates-translate-page-vue"}[chunkId]||chunkId) + "." + {"0":"7b5467e0","1":"7a84fe2c","page--node-modules-gridsome-app-pages-404-vue":"d0f05707","page--src-pages-index-vue~page--src-templates-post-vue~page--src-templates-tag-vue~page--src-templat~f42e5fdd":"e5757120","page--src-pages-index-vue":"6b94a0b6","page--src-templates-tag-vue":"f08a3593","vendors~page--src-templates-post-vue~page--src-templates-translate-page-vue":"a6a175f3","page--src-templates-post-vue":"90c28a40","vendors~page--src-templates-translate-page-vue":"b4787db6","page--src-templates-translate-page-vue":"0b47b1be"}[chunkId] + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function
