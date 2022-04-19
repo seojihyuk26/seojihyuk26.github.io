@@ -2,3 +2,5 @@ User-agent: *
 Allow:/
 
 Sitemap: https://seojihyuk26.github.io/sitemap.xml
+
+#DaumWebMasterTool:7bd364fb9b8f36a06506fa4bb305d81829c0013c63d3df3f5308ce268138ec1e:h3QjMUO2rXir3uB9i30HcQ==
