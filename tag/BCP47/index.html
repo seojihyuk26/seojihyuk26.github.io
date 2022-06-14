@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>Hello, world! - 참여형 기록</title><meta name="gridsome:hash" content="5c2e1e4a43e10bc2b04ea9ab84249aee5c7dfa01"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" name="generator" content="Gridsome v0.7.23"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><meta data-vue-tag="ssr" data-key="description" name="description" content="내가 보기 위한 블로그"><link data-vue-tag="ssr" rel="icon" href="data:,"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="/assets/static/author.ce0531f.311a074780dd5578634a63287b9c4c0f.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="/assets/static/author.ac8d93a.311a074780dd5578634a63287b9c4c0f.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="/assets/static/author.b9532cc.311a074780dd5578634a63287b9c4c0f.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="76x76" href="/assets/static/author.f22e9f3.311a074780dd5578634a63287b9c4c0f.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="152x152" href="/assets/static/author.62d22cb.311a074780dd5578634a63287b9c4c0f.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="120x120" href="/assets/static/author.1539b60.311a074780dd5578634a63287b9c4c0f.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="167x167" href="/assets/static/author.dc0cdc5.311a074780dd5578634a63287b9c4c0f.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/static/author.7b22250.311a074780dd5578634a63287b9c4c0f.png"><link rel="preload" href="/assets/css/styles.styles.6d4ead65.css" as="style"><link rel="preload" href="/assets/js/app.f648234f.js" as="script"><link rel="preload" href="/assets/js/page--src-templates-tag-vue.997602e2.js" as="script"><link rel="preload" href="/assets/js/page--src-pages-index-vue~page--src-templates-post-vue~page--src-templates-tag-vue~page--src-templat~f42e5fdd.28ba8db3.js" as="script"><link rel="prefetch" href="/assets/js/0.35de0f7e.js"><link rel="prefetch" href="/assets/js/1.b3d0cc41.js"><link rel="prefetch" href="/assets/js/page--src-pages-404-vue.5d419ecf.js"><link rel="prefetch" href="/assets/js/page--src-pages-index-vue.92dfd03f.js"><link rel="prefetch" href="/assets/js/page--src-templates-post-vue.31fe6667.js"><link rel="prefetch" href="/assets/js/page--src-templates-translate-page-vue.13fb7ced.js"><link rel="prefetch" href="/assets/js/vendors~page--src-templates-post-vue~page--src-templates-translate-page-vue.a6a175f3.js"><link rel="prefetch" href="/assets/js/vendors~page--src-templates-translate-page-vue.b4787db6.js"><link rel="stylesheet" href="/assets/css/styles.styles.6d4ead65.css"><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+  </head>
+  <body >
+    <script>
+      // Add dark / light detection that runs before Vue.js load. Borrowed from overreacted.io
+      (function() {
+        window.__onThemeChange = function() {};
+        function setTheme(newTheme) {
+          window.__theme = newTheme;
+          preferredTheme = newTheme;
+          document.body.setAttribute('data-theme', newTheme);
+          window.__onThemeChange(newTheme);
+        }
+
+        var preferredTheme;
+        try {
+          preferredTheme = localStorage.getItem('theme');
+        } catch (err) { }
+
+        window.__setPreferredTheme = function(newTheme) {
+          setTheme(newTheme);
+          try {
+            localStorage.setItem('theme', newTheme);
+          } catch (err) {}
+        }
+
+        var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        darkQuery.addListener(function(e) {
+          window.__setPreferredTheme(e.matches ? 'dark' : 'light')
+        });
+
+        setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
+      })();
+    </script>
+
+    <div id="app" data-server-rendered="true"><header class="header showMobile"><div class="header__left"><a href="/" class="logo active"><span class="logo__text">
+    ← <span class="home__text">Home</span></span></a></div><div class="header__right"><button role="button" aria-label="Toggle dark/light" class="toggle-theme"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button></div></header><main class="main"><h1 class="tag-title text-center space-bottom">
+    # BCP47
+  </h1><div class="posts"><div class="post-card content-box"><div class="post-card__header"><!----></div><div class="post-card__content"><h2 class="post-card__title">Sharing language and script code relation(BCP47) data file.</h2><p class="post-card__description">I've processed language-subtag-registry file on IANA from record-jar to json.</p><div class="post-meta post-card__meta">
+   Posted 2022.06.14 .
+   <strong>1 min read.</strong></div><div class="post-tags post-card__tags"></div><a href="/sharing-language-and-script-code-relation-bc-p47-data-file/" class="post-card__link">Link</a></div></div></div></main><footer class="footer"><span class="footer__copyright">Copyright © 2022.
+    </span><span class="footer__links">Powered by <a href="//gridsome.org"> Gridsome </a></span></footer></div>
+    <script>window.__INITIAL_STATE__={"data":{"tag":{"title":"BCP47","belongsTo":{"edges":[{"node":{"title":"Sharing language and script code relation(BCP47) data file.","path":"\u002Fsharing-language-and-script-code-relation-bc-p47-data-file\u002F","date":"2022.06.14 ","timeToRead":1,"description":"I've processed language-subtag-registry file on IANA from record-jar to json."}}]}}},"context":{}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script><script src="/assets/js/app.f648234f.js" defer></script><script src="/assets/js/page--src-templates-tag-vue.997602e2.js" defer></script><script src="/assets/js/page--src-pages-index-vue~page--src-templates-post-vue~page--src-templates-tag-vue~page--src-templat~f42e5fdd.28ba8db3.js" defer></script>
+  </body>
+</html>
