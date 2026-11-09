@@ -1,4 +1,0 @@
-[submodule "docs"]
-	path = docs
-	url = https://github.com/seojihyuk26/GridSome-Blog/
-	branch = gh-pages

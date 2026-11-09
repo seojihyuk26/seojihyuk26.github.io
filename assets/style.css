@@ -1,0 +1,33 @@
+:root { color-scheme: light; --background: #f8f7f3; --text: #282c29; --secondary: #626761; --link: #305e4b; --line: #d5d9d1; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { color-scheme: dark; --background: #202421; --text: #e8e8e0; --secondary: #b1b8ae; --link: #b2d9c2; --line: #454c43; }
+  }
+  :root[data-theme="dark"] { color-scheme: dark; --background: #202421; --text: #e8e8e0; --secondary: #b1b8ae; --link: #b2d9c2; --line: #454c43; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--background); color: var(--text); font: 18px/1.6 Georgia, Cambria, "Times New Roman", serif; -webkit-font-smoothing: antialiased; }
+  .page { max-width: calc(70ch + 48px); margin: auto; padding: 32px 24px 64px; }
+  a { color: var(--link); text-decoration: underline; text-underline-offset: .18em; }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible, select:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
+  .skip-link { position: absolute; top: -80px; left: 16px; padding: 8px 12px; background: var(--background); }
+  .skip-link:focus { top: 12px; z-index: 2; }
+  .appearance { display: flex; justify-content: flex-end; align-items: center; gap: 9px; margin-bottom: 20px; color: var(--secondary); font: 13px/1.4 system-ui, sans-serif; }
+  [hidden] { display: none !important; }
+  select { background: var(--background); color: var(--text); border: 1px solid var(--line); border-radius: 4px; padding: 7px 9px; font: inherit; }
+  h1 { margin: 0 0 12px; font-size: 40px; line-height: 1.2; font-weight: normal; letter-spacing: -.025em; }
+  .profile p { margin: 0; }
+  .role { color: var(--secondary); font: 16px/1.65 system-ui, sans-serif; }
+  .research { margin-top: 21px !important; }
+  .profile-links { display: flex; flex-wrap: wrap; gap: 8px 22px; list-style: none; margin: 20px 0 0; padding: 0; font: 14px/1.7 system-ui, sans-serif; }
+  .profile-links li { overflow-wrap: anywhere; }
+  .pending { color: var(--secondary); }
+  .status { font-size: 12px; }
+  .writing { margin-top: 37px; border-top: 1px solid var(--line); padding-top: 25px; }
+  h2 { font: 600 19px/1.4 system-ui, sans-serif; margin: 0 0 27px; }
+  h3 { font-size: 20px; font-weight: normal; line-height: 1.5; margin: 30px 0 8px; }
+  h3 a { text-decoration-thickness: 1px; }
+  .writing p { margin: 0 0 28px; color: var(--secondary); font-size: 16px; }
+  .writing > :first-child { margin-top: 0; }
+  @media (max-width: 480px) { .page { padding: 20px 24px 48px; } .appearance { margin-bottom: 25px; } h1 { font-size: 36px; } .writing { margin-top: 29px; } .profile-links { gap: 9px 18px; } }
+  @media print { :root, :root[data-theme], :root:not([data-theme="light"]) { --background: #fff; --text: #000; --secondary: #333; --link: #000; --line: #bbb; } .appearance, .skip-link { display: none !important; } .page { padding: 0; max-width: none; } }
+  
