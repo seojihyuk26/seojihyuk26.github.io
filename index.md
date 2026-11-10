@@ -2,14 +2,14 @@
 layout: default
 profile: true
 title: "Jihyuk SEO"
-role: "PhD student in mathematics"
+role: "2nd year PhD student"
 affiliation: "IRIF, Université Paris Cité"
 research: "Transcendental number theory and symbolic dynamics"
 email: "jihyuk.seo@irif.fr"
 # Upload cv.pdf to the repository root, then change this to "/cv.pdf".
 cv: ""
 # Paste your full ORCID profile URL here when ready.
-orcid: ""
+orcid: "0009-0007-0415-2692"
 ---
 
 ## Papers and preprints
