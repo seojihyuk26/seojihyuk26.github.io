@@ -57,8 +57,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-
 .profile { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; }
 .profile-info { flex: 1; min-width: 0; }
 .profile-media { flex-shrink: 0; }
-.profile-photo, .profile-photo-placeholder { width: 144px; height: 144px; border-radius: 8px; display: block; }
-.profile-photo { object-fit: cover; object-position: center 20%; border: 1px solid var(--line); }
+.profile-photo, .profile-photo-placeholder { width: 172px; height: 210px; border-radius: 8px; display: block; }
+.profile-photo { object-fit: cover; object-position: center; border: 1px solid var(--line); }
 .profile-photo-placeholder {
   display: flex;
   align-items: center;
@@ -95,7 +95,7 @@ h3 a { text-decoration-thickness: 1px; }
   .page { padding: 20px 24px 48px; }
   .appearance { margin-bottom: 20px; }
   .profile { flex-direction: column-reverse; gap: 20px; }
-  .profile-photo, .profile-photo-placeholder { width: 112px; height: 112px; }
+  .profile-photo, .profile-photo-placeholder { width: 136px; height: 166px; }
   h1 { font-size: 36px; }
   .writing { margin-top: 29px; }
   .profile-links { gap: 9px 18px; }

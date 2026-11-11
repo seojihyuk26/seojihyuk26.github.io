@@ -11,7 +11,7 @@ supervisor:
 affiliation: "IRIF, Université Paris Cité"
 research: "Transcendental number theory and symbolic dynamics"
 email: "jihyuk.seo@irif.fr"
-photo: "/assets/IMG-20261110-WA0017(1).jpg"
+photo: "/assets/photo.jpg"
 cv: "/assets/EnglishCV.pdf"
 # Paste your full ORCID profile URL here when ready.
 orcid: "https://orcid.org/0009-0007-0415-2692"
