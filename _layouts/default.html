@@ -2,41 +2,43 @@
 <html lang="{{ site.lang | default: 'en' }}">
 <head>
   <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="color-scheme" content="light dark">
-        <title>{{ page.title | default: site.title | escape }}</title>
-          <meta name="description" content="{{ site.description | escape }}">
-            <link rel="canonical" href="{{ page.url | absolute_url }}">
-              <script src="{{ '/assets/theme.js' | relative_url }}"></script>
-                <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
-                </head>
-                <body>
-                  <a class="skip-link" href="#content">Skip to content</a>
-                    <div class="page">
-                        <div class="appearance" id="appearance" hidden>
-                              <label for="theme">Appearance</label>
-                                    <select id="theme" aria-label="Color appearance">
-                                            <option value="system">System</option>
-                                                    <option value="light">Light</option>
-                                                            <option value="dark">Dark</option>
-                                                                  </select>
-                                                                      </div>
-                                                                          <main id="content">
-                                                                                {% if page.profile %}
-                                                                                      <header class="profile">
-                                                                                              <h1>{{ page.title | escape }}</h1>
-                                                                                                      <p class="role">{{ page.role | escape }}<br>{{ page.affiliation | escape }}</p>
-                                                                                                              <p class="research">{{ page.research | escape }}</p>
-                                                                                                                      <ul class="profile-links" aria-label="Contact and documents">
-                                                                                                                                <li><a href="mailto:{{ page.email | escape }}">{{ page.email | escape }}</a></li>
-                                                                                                                                          <li>{% if page.cv and page.cv != '' %}<a href="{{ page.cv | relative_url }}">CV</a>{% else %}<span class="pending">CV <span class="status">(forthcoming)</span></span>{% endif %}</li>
-                                                                                                                                                    <li>{% if page.orcid and page.orcid != '' %}<a href="{{ page.orcid | escape }}" rel="me">ORCID</a>{% else %}<span class="pending">ORCID <span class="status">(link pending)</span></span>{% endif %}</li>
-                                                                                                                                                            </ul>
-                                                                                                                                                                  </header>
-                                                                                                                                                                        {% endif %}
-                                                                                                                                                                              <div class="writing">{{ content }}</div>
-                                                                                                                                                                                  </main>
-                                                                                                                                                                                    </div>
-                                                                                                                                                                                    </body>
-                                                                                                                                                                                    </html>
-                                                                                                                                                                                    
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>{{ page.title | default: site.title | escape }}</title>
+  <meta name="description" content="{{ site.description | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <script src="{{ '/assets/theme.js' | relative_url }}"></script>
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <div class="page">
+    <div class="appearance" id="appearance" hidden>
+      <label for="theme">Appearance</label>
+      <select id="theme" aria-label="Color appearance">
+        <option value="system">System</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </div>
+    <main id="content">
+      {% if page.profile %}
+      <header class="profile">
+        <h1>{{ page.title | escape }}</h1>
+        <p class="role">{{ page.role | escape }}<br>{{ page.affiliation | escape }}</p>
+        <p class="research">{{ page.research | escape }}</p>
+        {% if page.supervisor and page.supervisor != '' %}
+        <p class="supervisor">Supervised by {% if page.supervisor.first %}{{ page.supervisor | join: " and " | escape }}{% else %}{{ page.supervisor | escape }}{% endif %}</p>
+        {% endif %}
+        <ul class="profile-links" aria-label="Contact and documents">
+          <li><a href="mailto:{{ page.email | escape }}">{{ page.email | escape }}</a></li>
+          <li>{% if page.cv and page.cv != '' %}<a href="{{ page.cv | relative_url }}">CV</a>{% else %}<span class="pending">CV <span class="status">(forthcoming)</span></span>{% endif %}</li>
+          <li>{% if page.orcid and page.orcid != '' %}<a href="{{ page.orcid | escape }}" rel="me">ORCID</a>{% else %}<span class="pending">ORCID <span class="status">(link pending)</span></span>{% endif %}</li>
+        </ul>
+      </header>
+      {% endif %}
+      <div class="writing">{{ content }}</div>
+    </main>
+  </div>
+</body>
+</html>
