@@ -13,28 +13,48 @@
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
   <div class="page">
-    <div class="appearance" id="appearance" hidden>
-      <label for="theme">Appearance</label>
-      <select id="theme" aria-label="Color appearance">
-        <option value="system">System</option>
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-      </select>
+    <div class="appearance" id="appearance" role="group" aria-label="Color theme" hidden>
+      <button type="button" class="theme-btn" data-theme-value="system" aria-label="System theme" title="System" aria-pressed="false">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor" stroke="none"/>
+        </svg>
+      </button>
+      <button type="button" class="theme-btn" data-theme-value="light" aria-label="Light mode" title="Light" aria-pressed="false">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+      </button>
+      <button type="button" class="theme-btn" data-theme-value="dark" aria-label="Dark mode" title="Dark" aria-pressed="false">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
     </div>
     <main id="content">
       {% if page.profile %}
       <header class="profile">
-        <h1>{{ page.title | escape }}</h1>
-        <p class="role">{{ page.role | escape }}<br>{{ page.affiliation | escape }}</p>
-        <p class="research">{{ page.research | escape }}</p>
-        {% if page.supervisor and page.supervisor != '' %}
-        <p class="supervisor">Supervised by {% if page.supervisor.first %}{{ page.supervisor | join: " and " | escape }}{% else %}{{ page.supervisor | escape }}{% endif %}</p>
-        {% endif %}
-        <ul class="profile-links" aria-label="Contact and documents">
-          <li><a href="mailto:{{ page.email | escape }}">{{ page.email | escape }}</a></li>
-          <li>{% if page.cv and page.cv != '' %}<a href="{{ page.cv | relative_url }}">CV</a>{% else %}<span class="pending">CV <span class="status">(forthcoming)</span></span>{% endif %}</li>
-          <li>{% if page.orcid and page.orcid != '' %}<a href="{{ page.orcid | escape }}" rel="me">ORCID</a>{% else %}<span class="pending">ORCID <span class="status">(link pending)</span></span>{% endif %}</li>
-        </ul>
+        <div class="profile-info">
+          <h1>{{ page.title | escape }}</h1>
+          <p class="role">{{ page.role | escape }}<br>{{ page.affiliation | escape }}</p>
+          {% if page.supervisor and page.supervisor != '' %}
+          <p class="supervisor">Supervised by {% if page.supervisor.first %}{{ page.supervisor | join: " and " | escape }}{% else %}{{ page.supervisor | escape }}{% endif %}</p>
+          {% endif %}
+          <p class="research">{{ page.research | escape }}</p>
+          <ul class="profile-links" aria-label="Contact and documents">
+            <li><a href="mailto:{{ page.email | escape }}">{{ page.email | escape }}</a></li>
+            <li>{% if page.cv and page.cv != '' %}<a href="{{ page.cv | relative_url }}">CV</a>{% else %}<span class="pending">CV <span class="status">(forthcoming)</span></span>{% endif %}</li>
+            <li>{% if page.orcid and page.orcid != '' %}<a href="{{ page.orcid | escape }}" rel="me">ORCID</a>{% else %}<span class="pending">ORCID <span class="status">(link pending)</span></span>{% endif %}</li>
+          </ul>
+        </div>
+        <div class="profile-media">
+          {% if page.photo and page.photo != '' %}
+          <img class="profile-photo" src="{{ page.photo | relative_url }}" alt="{{ page.title | escape }}">
+          {% else %}
+          <div class="profile-photo-placeholder" aria-hidden="true">Photo</div>
+          {% endif %}
+        </div>
       </header>
       {% endif %}
       <div class="writing">{{ content }}</div>
