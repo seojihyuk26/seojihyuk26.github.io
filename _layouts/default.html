@@ -71,7 +71,7 @@
           <h1>{{ page.title | escape }}</h1>
           <p class="role">{{ page.role | escape }}<br>{{ page.affiliation | escape }}</p>
           {% if page.supervisor and page.supervisor != '' %}
-          <p class="supervisor">Supervised by {% if page.supervisor.first %}{{ page.supervisor | join: " and " | escape }}{% else %}{{ page.supervisor | escape }}{% endif %}</p>
+          <p class="supervisor">Supervised by {% if page.supervisor.first %}{% for s in page.supervisor %}{% if s.name %}{% if s.url and s.url != '' %}<a href="{{ s.url | escape }}">{{ s.name | escape }}</a>{% else %}{{ s.name | escape }}{% endif %}{% else %}{{ s | escape }}{% endif %}{% unless forloop.last %} and {% endunless %}{% endfor %}{% else %}{{ page.supervisor | escape }}{% endif %}</p>
           {% endif %}
           {% if page.research and page.research != '' %}
           <p class="research">{{ page.research | escape }}</p>
