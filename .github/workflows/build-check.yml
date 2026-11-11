@@ -19,10 +19,10 @@ jobs:
           ruby-version: '3.3'
           bundler-cache: true
 
-      - name: Install Jekyll
-        run: gem install jekyll bundler
+      - name: Install dependencies
+        run: bundle install
 
       - name: Build site
-        run: jekyll build --strict_front_matter
+        run: bundle exec jekyll build --strict_front_matter
         env:
           JEKYLL_ENV: production
