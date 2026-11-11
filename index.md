@@ -15,6 +15,13 @@ cv: ""
 orcid: "https://orcid.org/0009-0007-0415-2692"
 ---
 
+## About
+
+I am a PhD student in mathematics at [IRIF](https://www.irif.fr/), Université Paris Cité, supervised by [Wolfgang Steiner](https://www.irif.fr/~steiner/) and Faustine Adiceam.
+<!-- Add your previous degree/institution here when ready, e.g.: Before that, I completed my Master's degree at ... -->
+
+My research lies at the intersection of transcendental number theory and symbolic dynamics. In particular, I study the transcendence and Diophantine properties of numbers arising from numeration systems such as $$\beta$$-expansions and from structured symbolic systems such as dendric shifts.
+
 ## Preprints
 
 ### [Transcendence of dendric beta-expansions with pure discrete spectrum](https://arxiv.org/abs/2610.00856)
@@ -33,4 +40,12 @@ Preprint, 2026 · arXiv:2610.00856
 
 with Co-author  
 Journal Name, 2027
+-->
+
+## Talks
+
+<p class="empty">Forthcoming.</p>
+
+<!-- Add talks here, newest first:
+- *Talk title*, Seminar or Conference Name, Institution, Month Year.
 -->

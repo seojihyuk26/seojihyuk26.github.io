@@ -7,6 +7,38 @@
   <title>{{ page.title | default: site.title | escape }}</title>
   <meta name="description" content="{{ site.description | escape }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (typeof katex !== "undefined") {
+        var mathScripts = document.querySelectorAll('script[type^="math/tex"]');
+        for (var i = 0; i < mathScripts.length; i++) {
+          var s = mathScripts[i];
+          var displayMode = s.type.indexOf("mode=display") !== -1;
+          var span = document.createElement(displayMode ? "div" : "span");
+          try {
+            katex.render(s.textContent, span, { displayMode: displayMode, throwOnError: false });
+          } catch (_) {
+            span.textContent = s.textContent;
+          }
+          s.parentNode.replaceChild(span, s);
+        }
+      }
+      if (typeof renderMathInElement === "function") {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+            { left: "\\(", right: "\\)", display: false },
+            { left: "\\[", right: "\\]", display: true }
+          ],
+          throwOnError: false
+        });
+      }
+    });
+  </script>
   <script src="{{ '/assets/theme.js' | relative_url }}"></script>
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 </head>
@@ -41,7 +73,9 @@
           {% if page.supervisor and page.supervisor != '' %}
           <p class="supervisor">Supervised by {% if page.supervisor.first %}{{ page.supervisor | join: " and " | escape }}{% else %}{{ page.supervisor | escape }}{% endif %}</p>
           {% endif %}
+          {% if page.research and page.research != '' %}
           <p class="research">{{ page.research | escape }}</p>
+          {% endif %}
           <ul class="profile-links" aria-label="Contact and documents">
             <li><a href="mailto:{{ page.email | escape }}">{{ page.email | escape }}</a></li>
             <li>{% if page.cv and page.cv != '' %}<a href="{{ page.cv | relative_url }}">CV</a>{% else %}<span class="pending">CV <span class="status">(forthcoming)</span></span>{% endif %}</li>
